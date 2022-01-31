@@ -2,10 +2,10 @@
 
 # [Labs64](https://www.labs64.com) Java Code Style
 
-[![NetLicensing Client - CI](https://github.com/Labs64/code-analysis/actions/workflows/code-analysis-ci.yml/badge.svg)](https://github.com/Labs64/code-analysis/actions/workflows/code-analysis-ci.yml)
+[![Labs64 Java Code Style - CI](https://github.com/Labs64/code-analysis/actions/workflows/code-analysis-ci.yml/badge.svg)](https://github.com/Labs64/code-analysis/actions/workflows/code-analysis-ci.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.labs64.commons/code-analysis/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.labs64.commons/code-analysis)
 [![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Labs64/code-analysis/blob/master/LICENSE)
-[![Labs64 @ LinkedIn](https://img.shields.io/badge/NetLicensing-0077B5.svg?logo=LinkedIn)](https://www.linkedin.com/company/labs64-gmbh/)
+[![Labs64 @ LinkedIn](https://img.shields.io/badge/Labs64-0077B5.svg?logo=LinkedIn)](https://www.linkedin.com/company/labs64-gmbh/)
 
 ## Quick Start
 
