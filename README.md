@@ -13,45 +13,84 @@ The recommended way to get started using [`code-analysis`](https://search.maven.
 
 Maven:
 ```xml
-  <!-- https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html -->
-  <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-checkstyle-plugin</artifactId>
-      <version>${maven-checkstyle-plugin.version}</version>
-      <dependencies>
-          <dependency>
-              <groupId>com.labs64.commons</groupId>
-              <artifactId>code-analysis</artifactId>
-              <version>${labs64.code-analysis.version}</version>
-          </dependency>
-      </dependencies>
-  </plugin>
+<!-- https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html -->
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>${maven-checkstyle-plugin.version}</version>
+    <configuration>
+        <configLocation>labs64-rulesets/checkstyle.xml</configLocation>
+        <failsOnError>false</failsOnError>
+    </configuration>
+    <executions>
+        <execution>
+            <id>checkstyle</id>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
+    <dependencies>
+        <dependency>
+            <groupId>com.labs64.commons</groupId>
+            <artifactId>code-analysis</artifactId>
+            <version>${labs64.code-analysis.version}</version>
+        </dependency>
+    </dependencies>
+</plugin>
 
-  <!-- https://spotbugs.github.io -->
-  <plugin>
-      <groupId>com.github.spotbugs</groupId>
-      <artifactId>spotbugs-maven-plugin</artifactId>
-      <version>${spotbugs-maven-plugin.version}</version>
-      <dependencies>
-          <dependency>
-              <groupId>com.labs64.commons</groupId>
-              <artifactId>code-analysis</artifactId>
-              <version>${labs64.code-analysis.version}</version>
-          </dependency>
-      </dependencies>
-  </plugin>
+<!-- https://spotbugs.github.io -->
+<plugin>
+    <groupId>com.github.spotbugs</groupId>
+    <artifactId>spotbugs-maven-plugin</artifactId>
+    <version>${spotbugs-maven-plugin.version}</version>
+    <configuration>
+        <includeFilterFile>labs64-rulesets/spotbugs.xml</includeFilterFile>
+        <failOnError>false</failOnError>
+    </configuration>
+    <executions>
+        <execution>
+            <id>spotbugs</id>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
+    <dependencies>
+        <dependency>
+            <groupId>com.labs64.commons</groupId>
+            <artifactId>code-analysis</artifactId>
+            <version>${labs64.code-analysis.version}</version>
+        </dependency>
+    </dependencies>
+</plugin>
 
-  <!-- https://maven.apache.org/plugins/maven-pmd-plugin/usage.html -->
-  <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-pmd-plugin</artifactId>
-      <version>${maven-pmd-plugin.version}</version>
-      <dependencies>
-          <dependency>
-              <groupId>com.labs64.commons</groupId>
-              <artifactId>code-analysis</artifactId>
-              <version>${labs64.code-analysis.version}</version>
-          </dependency>
-      </dependencies>
-  </plugin>
+<!-- https://maven.apache.org/plugins/maven-pmd-plugin/usage.html -->
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-pmd-plugin</artifactId>
+    <version>${maven-pmd-plugin.version}</version>
+    <configuration>
+        <rulesets>
+            <ruleset>labs64-rulesets/pmd.xml</ruleset>
+        </rulesets>
+        <failOnViolation>false</failOnViolation>
+        <printFailingErrors>true</printFailingErrors>
+    </configuration>
+    <executions>
+        <execution>
+            <id>pmd</id>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
+    <dependencies>
+        <dependency>
+            <groupId>com.labs64.commons</groupId>
+            <artifactId>code-analysis</artifactId>
+            <version>${labs64.code-analysis.version}</version>
+        </dependency>
+    </dependencies>
+</plugin>
 ```
