@@ -5,7 +5,7 @@
 
     <groupId>com.labs64.commons</groupId>
     <artifactId>code-analysis</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.1</version>
     <name>Labs64 :: Commons :: Static Code Analysis Rules</name>
     <url>https://www.labs64.com</url>
     <description>Labs64 Static Code Analysis Rules for Java (CheckStyle, SpotBugs, PMD)</description>
@@ -28,7 +28,7 @@
         <url>https://github.com/Labs64/code-analysis</url>
         <connection>scm:git:git@github.com:Labs64/code-analysis.git</connection>
         <developerConnection>scm:git:git@github.com:Labs64/code-analysis.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>2.0.1</tag>
     </scm>
 
     <issueManagement>
