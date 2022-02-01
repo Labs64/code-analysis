@@ -8,7 +8,7 @@
     <version>2.0.1-SNAPSHOT</version>
     <name>Labs64 :: Commons :: Static Code Analysis Rules</name>
     <url>https://www.labs64.com</url>
-    <description>Labs64 Java Code Style</description>
+    <description>Labs64 Static Code Analysis Rules for Java (CheckStyle, SpotBugs, PMD)</description>
     <inceptionYear>2014</inceptionYear>
 
     <organization>
