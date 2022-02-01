@@ -19,7 +19,7 @@ Maven:
     <artifactId>maven-checkstyle-plugin</artifactId>
     <version>${maven-checkstyle-plugin.version}</version>
     <configuration>
-        <configLocation>labs64-rulesets/checkstyle.xml</configLocation>
+        <configLocation>labs64-code-analysis/checkstyle.xml</configLocation>
         <failsOnError>false</failsOnError>
     </configuration>
     <executions>
@@ -45,7 +45,7 @@ Maven:
     <artifactId>spotbugs-maven-plugin</artifactId>
     <version>${spotbugs-maven-plugin.version}</version>
     <configuration>
-        <includeFilterFile>labs64-rulesets/spotbugs.xml</includeFilterFile>
+        <includeFilterFile>labs64-code-analysis/spotbugs.xml</includeFilterFile>
         <failOnError>false</failOnError>
     </configuration>
     <executions>
@@ -72,7 +72,7 @@ Maven:
     <version>${maven-pmd-plugin.version}</version>
     <configuration>
         <rulesets>
-            <ruleset>labs64-rulesets/pmd.xml</ruleset>
+            <ruleset>labs64-code-analysis/pmd.xml</ruleset>
         </rulesets>
         <failOnViolation>false</failOnViolation>
         <printFailingErrors>true</printFailingErrors>
